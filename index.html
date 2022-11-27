@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="css/style.css" /> 
+  </head>
+  <body>
+    <h1>Text to Speech</h1>
+    <p>Select Voice</p>
+
+    <!-- Select Menu for Voice -->
+    <select id="voices"></select>
+    <hr/>
+    <!-- Range Slliders for Volume, Rate & Pitch -->
+        Volume
+        <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
+        <span id="volume-label">1</span>
+      
+        Rate
+        <input type="range" min="0.1" max="10" value="1" id="rate" step="0.1" />
+        <span id="rate-label">1</span>
+      
+        Pitch
+        <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+        <span id="pitch-label">1</span>
+      
+    <!-- Text Area  for the User to Type -->
+    <textarea cols="30" rows="10" placeholder="Type here..."></textarea>
+
+    <!-- Control Buttons -->
+    <div>
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="resume">Resume</button>
+      <button id="cancel">Cancel</button>
+    </div>
+    
+    <hr/>
+    <button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
+  <div id="output" class="hide"></div>
+
+    
+  </body>
+  <script src="js/script.js"></script>
+</html>		
+
+
